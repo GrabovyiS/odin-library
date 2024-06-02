@@ -62,8 +62,8 @@ function addBookToLibrary(title, author, pages, read) {
   bookCard.appendChild(bookAuthor);
   bookCard.appendChild(bookPages);
   
-  buttonsContainer.appendChild(bookReadButton);
   buttonsContainer.appendChild(bookDeleteButton);
+  buttonsContainer.appendChild(bookReadButton);
 
   bookCard.appendChild(buttonsContainer);
   
