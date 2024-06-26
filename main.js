@@ -1,6 +1,5 @@
 const myLibrary = [];
 const booksContainer = document.querySelector('main');
-let idCounter = 0;
 
 const openModalButton = document.querySelector('#open-modal-btn');
 const closeModalButton = document.querySelector('#close-modal-btn');
@@ -22,13 +21,17 @@ closeModalButton.addEventListener('click', () => {
 
 booksForm.addEventListener('submit', submitModalForm);
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.id = idCounter;
-  idCounter++;
+class Book {
+  static #idCounter = 0;
+
+  constructor (title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.id = Book.#idCounter;
+    Book.#idCounter++;
+  }
 }
 
 function addBookToLibrary(title, author, pages, read) {
