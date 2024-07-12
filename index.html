@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Library</title>
-</head>
-<body>
-  <dialog id="modal">
-    <form action="./index.html">
-      <div class="form-control">
-        <label for="title">Book title</label>
-        <input id="title" type="text">
-      </div>
-      <div class="form-control">
-        <label for="author">Author of the book</label>
-        <input id="author" type="text">
-      </div>
-      <div class="form-control">
-        <label for="pages">How many pages</label>
-        <input id="pages" type="number">
-      </div>
-      <div class="checkbox-control">
-        <label for="title">Have you read the book</label>
-        <input id="read" type="checkbox">
-      </div>
-      <div class="buttons-control">
-        <button type="button" id="close-modal-btn" class="cancel-btn">Cancel</button>
-        <button id="add-book-btn" class="add-book-btn">Add Book</button>
-      </div>
-    </form>
-  </dialog>
-  <header>
-    <h1>Library</h1>
-    <button id="open-modal-btn">Add Book</button>
-  </header>
-  <main>
-  </main>
-  <script src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <dialog id="modal">
+      <form action="./index.html">
+        <div class="form-control">
+          <label for="title">Book title</label>
+          <input required id="title" type="text" />
+        </div>
+        <div class="form-control">
+          <label for="author">Author of the book</label>
+          <input required id="author" type="text" />
+        </div>
+        <div class="form-control">
+          <label for="pages">How many pages</label>
+          <input required min="1" max="5000" id="pages" type="number" />
+        </div>
+        <div class="checkbox-control">
+          <label for="title">Have you read the book</label>
+          <input required id="read" type="checkbox" />
+        </div>
+        <div class="buttons-control">
+          <button type="button" id="close-modal-btn" class="cancel-btn">
+            Cancel
+          </button>
+          <button id="add-book-btn" class="add-book-btn">Add Book</button>
+        </div>
+      </form>
+    </dialog>
+    <header>
+      <h1>Library</h1>
+      <button id="open-modal-btn">Add Book</button>
+    </header>
+    <main></main>
+    <script src="./main.js"></script>
+  </body>
 </html>
